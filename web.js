@@ -5,4 +5,4 @@ var app = express();
 
 app.use(morgan('dev'));
 app.use(gzippo.staticGzip("" + __dirname + "/build"));
-app.listen(process.env.PORT || 8001);
+app.listen(8001);
