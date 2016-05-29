@@ -12,7 +12,14 @@
     "type": "git",
     "url": "git@github.com:ngbp/ngbp.git"
   },
-  "dependencies": {},
+  "scripts": {
+    "start": "node web.js"
+  },
+  "dependencies": {
+    "express": "^4.13.4",
+    "gzippo": "^0.2.0",
+    "morgan": "^1.7.0"
+  },
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-bump": "0.0.6",
