@@ -1,0 +1,90 @@
+{ "loanDetails" : [
+  {
+    "customer": "Suraj Jadhav",
+    "bank": "ICICI",
+    "loanAmount": "90,00,000",
+    "project": "Aristro",
+    "contact": "9876543210"
+  },
+  {
+    "customer": "Nikit Vira",
+    "bank": "Axis",
+    "loanAmount": "70,00,000",
+    "project": "Lodha",
+    "contact": "9876543210"
+  },{
+    "customer": "Sachin Tendulkar",
+    "bank": "HDFC",
+    "loanAmount": "1,00,00,000",
+    "project": "Aristro",
+    "contact": "9876543210"
+  },{
+    "customer": "Sweta Saundarava",
+    "bank": "ICICI",
+    "loanAmount": "50,000,000",
+    "project": "Chauhan",
+    "contact": "9876543210"
+  },{
+    "customer": "Manjusha Wagh",
+    "bank": "Axis",
+    "loanAmount": "75,000,000",
+    "project": "Lodha",
+    "contact": "9876543210"
+  },{
+    "customer": "Chris Demello",
+    "bank": "HDFC",
+    "loanAmount": "80,000,000",
+    "project": "Bouleward",
+    "contact": "9876543210"
+  },{
+    "customer": "Suraj Jadhav",
+    "bank": "ICICI",
+    "loanAmount": "90,000,000",
+    "project": "Bouleward",
+    "contact": "9876543210"
+  },{
+    "customer": "Suraj Jadhav",
+    "bank": "ICICI",
+    "loanAmount": "90,00,000",
+    "project": "Aristro",
+    "contact": "9876543210"
+  },
+  {
+    "customer": "Nikit Vira",
+    "bank": "Axis",
+    "loanAmount": "70,00,000",
+    "project": "Lodha",
+    "contact": "9876543210"
+  },{
+    "customer": "Sachin Tendulkar",
+    "bank": "HDFC",
+    "loanAmount": "1,00,00,000",
+    "project": "Aristro",
+    "contact": "9876543210"
+  },{
+    "customer": "Sweta Saundarava",
+    "bank": "ICICI",
+    "loanAmount": "50,000,000",
+    "project": "Chauhan",
+    "contact": "9876543210"
+  },{
+    "customer": "Manjusha Wagh",
+    "bank": "Axis",
+    "loanAmount": "75,000,000",
+    "project": "Lodha",
+    "contact": "9876543210"
+  },{
+    "customer": "Chris Demello",
+    "bank": "HDFC",
+    "loanAmount": "80,000,000",
+    "project": "Bouleward",
+    "contact": "9876543210"
+  },{
+    "customer": "Suraj Jadhav",
+    "bank": "ICICI",
+    "loanAmount": "90,000,000",
+    "project": "Bouleward",
+    "contact": "9876543210"
+  }
+  ]
+}

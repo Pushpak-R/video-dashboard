@@ -1,38 +1,59 @@
-.jumbotron {
-  margin: 40px 0 80px 0;
-  text-align: center;
-
-  h1 {
-    margin-bottom: 20px;
-    font-size: 55px;
-    line-height: 1;
+.left-side-menu{
+  width: 200px;
+  float: left;
+  min-height: 400px;
+  .menu-list{
+    position: absolute;
+    height: 100%;
+    background: #616BC5;
+    width: 200px;
+    border: 1px solid white;
   }
-
-  .lead {
-    font-size: 24px;
-    line-height: 1.25;
+  .menu-item{
+    min-height: 50px;
+    color: white;
+    >a{
+      color: white;
+      text-decoration: none !important;
+      height: 50px;
+      display: block;
+      padding: 15px;
+    }
+    .submenu-item{
+      display: block;
+      background: #616BC5;
+      padding: 10px;
+      a {
+        display: block;
+        color: white;
+      }
+    }
   }
-
-  .btn {
-    font-size: 21px;
-    padding: 14px 24px;
+  .menu-item:hover{
+    background: rgba(59, 59, 224, 0.74);
+    >a{
+      font-weight: bold;
+    }
+  }
+  .menu-item.active{
+    background: white;
+    color: #616BC5;
+    opacity : 0.9;
+    >a{
+      color: #616BC5;
+      text-decoration: none !important;
+    }
   }
 }
-
-.marketing {
-  .row {
-    margin-bottom: 10px;
-  }
-
-  .row:last-child {
-    margin-bottom: 0;
-  }
-  
-  h4 [class*=" icon-"], h4 [class^="icon-"] {
-    margin-right: 5px;
-    vertical-align: -10%;
-    font-size: 28px;
-    line-height: 1;
-  }
+.detail-panel{
+  overflow: auto;
+  border: 1px solid white;
+  position: absolute;
+  right: 0px;
+  width: calc(~"100% - 215px");
+  height: 100%;
+  background: #E9E9F7;
 }
-
+.list-heading{
+  border-bottom: 2px solid white;
+}
