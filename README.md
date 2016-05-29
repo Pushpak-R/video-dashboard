@@ -4,8 +4,8 @@
 Install Node.js and then:
 
 ```sh
-$ git clone git://github.com/joshdmiller/ng-boilerplate
-$ cd ng-boilerplate
+$ git clone https://github.com/Pushpak-R/Dashboard.git
+$ cd Dashboard
 $ sudo npm -g install grunt-cli karma bower
 $ npm install
 $ bower install
