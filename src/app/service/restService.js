@@ -1,9 +1,9 @@
 var appModule = angular.module('ngRL');
 appModule.factory('restService', function($http) {
-  var apiPath = "assets/";
+  var apiPath = "https://amagi.herokuapp.com/ui-test/api/v1/spots";
   var serviceObj = {
-    getLoanDetails : function(){
-      return $http.get(apiPath + "loanDetails.json", { cache : true });
+    getVideoDetails : function(){
+      return $http.get(apiPath, { cache : true });
     }
   };
   return serviceObj;

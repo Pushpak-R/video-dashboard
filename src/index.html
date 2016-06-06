@@ -16,31 +16,8 @@
 
   </head>
   <body>
-    <div class="container">
-      <div class="heading">
-        <div class="logo float-left display-inline">
-          RL Logo
-        </div>
-        <div class="right-user-info float-right display-inline">
-          <div class="user-profile display-inline">
-            <div class="user-name display-inline">
-              Mr. Anil Sawant
-            </div>
-            <div class="fa fa-user lg-icon profile-icon display-inline">
-
-            </div>
-          </div>
-          <div class="fa fa-comment-o sm-icon message-icon display-inline">
-
-          </div>
-          <div class="fa fa-bell-o sm-icon notification-icon display-inline">
-
-          </div>
-        </div>
-      </div>
-    </div>
 
     <div class="container main-cont" ui-view="main"></div>
-
+    <div class="loading" ng-show="$root.showLoader == true"><div class="spinner"></div></div>
   </body>
 </html>

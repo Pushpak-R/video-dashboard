@@ -1,0 +1,52 @@
+.video-cont{
+  position: relative;
+  display: inline-block;
+  width: 330px;
+  margin: 5px;
+  padding: 5px;
+  border: 1px solid orange;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  cursor: pointer;
+  img{
+    width: 120px;
+    display: inline-block;
+    float: left;
+  }
+  .right-detail{
+    display: inline-block;
+    max-width: 180px;
+    font-size: 12px;
+    margin-left: 10px;
+    div{
+      width:100%;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+  }
+}
+.video-cont:hover .overlay {
+  opacity:0.5;
+}
+.overlay {
+  position:absolute;
+  top:5px;
+  left:5px;
+  width:120px;
+  height:calc(~"100% - 10px");
+  background:#000;
+  opacity:0;
+  margin: 0px;
+}
+.fa-play:before {
+    content: "\f04b";
+    font-size: 40px;
+    text-align: center;
+    margin: auto;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 25px;
+    color: white;
+    bottom: 0px;
+    opacity: 1;
+}

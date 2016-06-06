@@ -2,21 +2,21 @@ angular.module( 'ngRL', [
   'templates-app',
   'templates-common',
   'ngRL.home',
-  'ngRL.leads',
-  'ngRL.appointments',
-  'ngRL.loanApplication',
-  'ngRL.task',
-  'ngRL.track',
   'ngSanitize',
   'ui.router'
 ])
 
 .config( function myAppConfig ( $stateProvider, $urlRouterProvider ) {
-  $urlRouterProvider.otherwise( '/home/leads' );
+  $urlRouterProvider.otherwise( '/home' );
 })
 
-.run( function run () {
-
+.run( function run ($rootScope, $ionicLoading) {
+  $rootScope.$on("loader_hide",function(){
+    $ionicLoading.hide();
+  });
+  $rootScope.$on("loader_show",function(){
+    $ionicLoading.show();
+  });
 })
 
 .controller( 'AppCtrl', function AppCtrl ( $scope, $location, $state ) {
@@ -25,7 +25,5 @@ angular.module( 'ngRL', [
       $scope.pageTitle = toState.data.pageTitle + ' | RL' ;
     }
   });
-
-  $state.go("home.leads");
 
 });

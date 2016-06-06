@@ -1,18 +1,43 @@
-<div class="" ng-init="activeMenu = 0">
-  <div class="left-side-menu">
-    <div class="menu-list">
-      <div class="menu-item disabled list-heading">
-        <a href="#" class="fa fa-qrcode">Dashboard</a>
+<div class="collapsible-bar-cont row">
+  <div class="search-box">
+    <span id="com_name">Amagi</span>
+    <input type="text" name="name" value="" placeholder="Search videos by name, company, spot, date or any by property" ng-model="search" />
+    <span id="com_pro">Am Tube</span>
+  </div>
+  <div class="list-cont">
+    <div class="date-heading" ng-click="showLastSeen = (showLastSeen == true)?false:true" ng-show="viewedVideos.length > 0">
+      Last Seen Videos
+      <div class="drop-icon fa fa-caret-square-o-down"></div>
+    </div>
+    <div class="videos" ng-show="showLastSeen == true">
+      <video-temp video="video" ng-repeat="video in viewedVideos" ng-click="videoClicked(video, false)"/>
+    </div>
+    <div class="collapsible-bar" ng-repeat="videos in groupedVideoDetails" ng-hide="search && search.split('').length > 0">
+      <div class="date-heading" ng-click="selectedDate = (selectedDate != videos[0]) ? videos[0]: ''">
+        {{videos[0]}}
+        <div class="drop-icon fa fa-caret-square-o-down"></div>
       </div>
-      <div class="menu-item" ng-class="{'active': $parent.activeMenu == $index}" ng-repeat="menu in menus" ng-click="$parent.activeMenu=$index">
-        <a ng-href="#/home{{menu.path}}">{{menu.name}}</a>
-        <div class="submenu-item" ng-if="menu.submenu.length > 0" ng-show="activeMenu == $index">
-          <ul><li ng-repeat="submenu in menu.submenu"><a ng-href="{{submenu.path}}">{{submenu.name}}</a></li></ul>
-        </div>
+      <div class="videos" ng-show="selectedDate == videos[0]">
+        <video-temp video="video" ng-repeat="video in videos[1]" ng-click="$parent.videoClicked(video)"/>
       </div>
     </div>
+    <div class="search-result" ng-show="search && search.split('').length > 0">
+      <video-temp video="video" ng-repeat="video in videoDetails | filter : search"/>
+    </div>
   </div>
-  <div class="detail-panel">
-    <div class="home-view" ui-view="home-view"></div>
   </div>
-</div>
+<div id="myModal" class="modal" ng-hide="showModal != true" ng-click="selectedVideo = undefined;showModal = false">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true" ng-click="selectedVideo = undefined;showModal = false">×</button>
+                    <h4 class="modal-title">{{selectedVideo.campaign_name}}</h4>
+                </div>
+                <div class="modal-body">
+                    <video ng-src="{{selectedVideo.video_path | trustUrl}}" autoplay>
+
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>

@@ -4,7 +4,7 @@
 Install Node.js and then:
 
 ```sh
-$ git clone https://github.com/Pushpak-R/Dashboard.git
+$ git clone https://github.com/Pushpak-R/video-dashboard.git
 $ cd Dashboard
 $ sudo npm -g install grunt-cli karma bower
 $ npm install
